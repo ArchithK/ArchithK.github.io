@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
-    <title>My Page</title>
+    <title>Archith's Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+  
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
   </head>
-  <body>
-    Hello World
 
-  </body>
-</html>
-
+  <body style = "background-color: rgba(21, 13, 66, 0.336)">
+    <style>
+      h1, form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+    </style>
+    <h1>Hello Reader, What is your name?</h1>
+  </br>
 <form id="myForm">
 <input type="text" id="name" placeholder="Enter name">
 <input type="submit" value="Save">
+</br>
+<md-elevated-button>To Site</md-elevated-button> 
 </form>
 
 <script>
@@ -30,3 +53,8 @@ alert('Data saved!');
     }
   };
 </script>
+
+
+  </body>
+</html>
+
